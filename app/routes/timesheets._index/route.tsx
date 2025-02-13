@@ -203,6 +203,13 @@ export default function TimesheetsPage() {
                     >
                       🗑
                     </button>
+
+                    <a
+                      href={`/timesheets/${timesheet.id}`}
+                      className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded-lg text-sm"
+                    >
+                      👁
+                    </a>
                   </td>
                 </tr>
               ))}

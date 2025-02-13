@@ -48,6 +48,10 @@ export const action = async ({ request, params }: { request: Request, params: { 
   if (!salary || salary < 800) errors.salary = "Salary must be at least $800.";
   if (!start_date) errors.start_date = "Start date is required.";
 
+  //phone validity
+  if(isNaN(phone) || phone?.length != 8) errors.phone = 'It should be a number with 8 digits.'
+
+
   const dob = new Date(date_of_birth);
   if (new Date().getFullYear() - dob.getFullYear() < 18) {
     errors.date_of_birth = "Employee must be at least 18 years old.";

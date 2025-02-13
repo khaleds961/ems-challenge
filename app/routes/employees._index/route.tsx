@@ -129,21 +129,6 @@ export default function EmployeesPage() {
                     >
                       ✏️
                     </a>
-
-                    {/* Delete Button */}
-                    <form method="post" action={`/employees/delete/${employee.id}`}>
-                      <button
-                        type="submit"
-                        className="bg-red-500 hover:bg-red-600 text-white px-1 py-1 rounded-lg text-sm"
-                        onClick={(e) => {
-                          if (!confirm("Are you sure you want to delete this employee?")) {
-                            e.preventDefault();
-                          }
-                        }}
-                      >
-                        🗑
-                      </button>
-                    </form>
                   </td>
 
                 </tr>

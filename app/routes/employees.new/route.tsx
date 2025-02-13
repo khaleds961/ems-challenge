@@ -34,6 +34,9 @@ export const action: ActionFunction = async ({ request }) => {
   if (!salary) errors.salary = "Salary is required.";
   if (!start_date) errors.start_date = "Start date is required.";
 
+  //phone validity
+  if(isNaN(phone) || phone?.length != 8) errors.phone = 'It should be a number with 8 digits.'
+
   // age is over 18
   const dob = new Date(date_of_birth);
   const today = new Date();
